@@ -10,3 +10,10 @@ discord.js v12.3.1
 
 # Configuration
 The API Credentials is in ```config.json``` file and you can configure it according to your needs.
+
+
+# Commands / How to use
+* You can use the bot with this prefix let the bot to disconnect, i.e. ```=dc```
+* Calling Cinia at the front or the back of the sentence, i.e. ```Cinia who are you?```
+
+### I'm open to any critique and suggestion regarding whether my code or the environment of this repo.
