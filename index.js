@@ -8,21 +8,16 @@ const Discord = require('discord.js');
 const {
 	prefix,
 	token,
+	projectIdGCP
 } = require('./config.json');
 const client = new Discord.Client();
 
 // Dialogflow Auth
-const projectId = 'YOUR PROJECT ID OF GCP';
+const projectId = projectIdGCP;
 const sessionId = '123456789';
 const languageCode = 'en'
 const dialogflow = require('@google-cloud/dialogflow');
 const sessionClient = new dialogflow.SessionsClient();
-
-//The arguments for Dialogflow
-//TODO: Create a loop for the end-user in Discord for it to send the message to Dialogflow
-//Dialogflow will process it and send it through the API
-//queries: Arguments/commands for the Dialogflow to process, below is for testing!
-//const queries = ['Who are you?']
 
 /*
 ||		Dialogflow API Detecting Response
@@ -126,16 +121,13 @@ client.on('message', async message => {
 		else if(dialogflowArgument.indexOf('cinia') > 0 || dialogflowArgument.indexOf('cinia?') > 0 || dialogflowArgument.indexOf('cinia!') > 0) dialogflowArgument.pop();
 		const dialogflowArguments = dialogflowArgument.join(" ");
 		const dialogflowQueries = [dialogflowArguments]
+		//For seeing the Arguments and Queries
 		//console.log(dialogflowArguments);
 		//console.log(dialogflowQueries);
 		executeQueries(projectId, sessionId, dialogflowQueries, languageCode);
 		
 	} else if(message.content.startsWith(`${prefix}dc`)) {
-			if(`${message.author}` === '<@286825508220436481>') {
-			return client.destroy();
-		} else {
-			return message.channel.send("Only my darling can use this command! :<")
-		}
+		return client.destroy();
 	}
 	
 });

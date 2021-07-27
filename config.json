@@ -1,3 +1,5 @@
 {
-    "token": "YOUR DISCORD TOKEN"
+	"prefix": "=",
+    "token": "YOUR DISCORD TOKEN",
+	"projectIdGCP": "YOUR PROJECT ID GOOGLE CLOUD"
 }
