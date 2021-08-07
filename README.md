@@ -13,7 +13,7 @@ The API Credentials is in ```config.json``` file and you can configure it accord
 
 
 # Commands / How to use
-* You can use the bot with this prefix let the bot to disconnect, i.e. ```=dc```
+* You can use the bot with this prefix to let the bot disconnect, i.e. ```=dc```
 * Calling Cinia at the front or the back of the sentence, i.e. ```Cinia who are you?```
 
 ### I'm open to any critique and suggestion regarding whether my code or the environment of this repo.
